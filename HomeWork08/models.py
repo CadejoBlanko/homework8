@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, BooleanField, DateTimeField, ReferenceField, connect
+from mongoengine import Document, StringField, ListField, BooleanField, DateTimeField, ReferenceField, connect
 
 
 class Author(Document):
@@ -9,7 +9,7 @@ class Author(Document):
 
 
 class Quote(Document):
-    tags = StringField()
+    tags = ListField(StringField())
     author = ReferenceField(Author)
     quote = StringField()
 
