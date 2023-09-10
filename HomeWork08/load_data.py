@@ -16,7 +16,7 @@ def load_authors():
 
 def load_quotes():
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    quotes_file = os.path.join(current_dir, 'quotes.json')
+    quotes_file = os.path.join(current_dir, 'qoutes.json')
     with open(quotes_file, 'r') as file:
         quotes_data = json.load(file)
         for quote_data in quotes_data:
